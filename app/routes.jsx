@@ -4,6 +4,10 @@ import { Route, IndexRoute } from 'react-router';
 import App from 'containers/App';
 import Vote from 'containers/Vote';
 import About from 'containers/About';
+
+/* ADDED */
+import Productlisting from 'containers/ProductListing';
+
 import LoginOrRegister from 'containers/LoginOrRegister';
 import Dashboard from 'containers/Dashboard';
 
@@ -39,6 +43,7 @@ export default (store) => {
       <Route path="login" component={LoginOrRegister} onEnter={redirectAuth} />
       <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
       <Route path="about" component={About} />
+      <Route path="ProductListing" component={Productlisting} />    /* ADDED */
     </Route>
   );
 };
